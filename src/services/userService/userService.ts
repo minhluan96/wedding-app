@@ -18,7 +18,7 @@ export default class UserService {
         UserService._instance = this;
     }
     
-    public async getUserById(userId: string): Promise<UserResponse> {
+    public async getUserById(userId: string): Promise<any> {
         return prisma.user.findUnique({
             where: {
                 id: userId
