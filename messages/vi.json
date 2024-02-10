@@ -1,0 +1,12 @@
+{
+  "RSVP": {
+    "delightedMessage": "Hi vọng bạn có thể tham dự buổi tiệc này với vợ chồng mình!",
+    "acceptBy": "Để thuận tiện cho việc sắp xếp chỗ ngồi, vui lòng phản hồi giúp vợ chồng mình nhé!",
+    "acceptButton": "Yeah, sẵn sàng!",
+    "cancelButton": "Oh, rất tiếc",
+    "sendFeedback": "Gửi phản hồi ",
+    "donationMessage": "Gửi lời chúc đến đôi uyên ương thông qua",
+    "namePlaceholder": "Tên của bạn",
+    "nameData": "Thân gửi {name},"
+  }
+}

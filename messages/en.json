@@ -1,0 +1,12 @@
+{
+  "RSVP": {
+    "delightedMessage": "We'd be delighted if you could attend. Looking forward to celebrating with you!",
+    "acceptBy": "Please kindly reply by 21st March, 2024",
+    "acceptButton": "Yes, I'll be attending!",
+    "cancelButton": "No, I'm sorry.",
+    "sendFeedback": "Send your feedback ",
+    "donationMessage": "Share your well wishes through thoughtful donations for us",
+    "namePlaceholder": "Your name",
+    "nameData": "Dear {name},"
+  }
+}
