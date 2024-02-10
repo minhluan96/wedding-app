@@ -66,8 +66,6 @@ export default function RSVP(): JSX.Element {
         });
     }, [selected, isNo, user, isYes, executeRecaptcha]);
     
-    console.log(user);
-    
     return !!executeRecaptcha ? (
         <form
             onSubmit={async (event) => {

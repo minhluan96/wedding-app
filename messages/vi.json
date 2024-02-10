@@ -8,5 +8,24 @@
     "donationMessage": "Gửi lời chúc đến đôi uyên ương thông qua",
     "namePlaceholder": "Tên của bạn",
     "nameData": "Thân gửi {name},"
+  },
+  "Home": {
+    "weddingDate": "31 Tháng 3, 2024",
+    "backButton": "Quay lại",
+    "menu": {
+      "invitation": "Thiệp mời",
+      "sendWishes": "Gửi lời chúc",
+      "aboutUs": "Thông tin"
+    },
+    "gettingMarried": "Chúng mình chính thức về một nhà",
+    "gettingMarriedSubTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nisi earum\n                                nihil\n                                perspiciatis\n                                magnam facilis, error explicabo obcaecati maiores sunt exercitationem doloribus tempora, sit voluptate autem quibusdam velit alias. Reprehenderit.",
+    "address": "Riverside Palace",
+    "city": "Quận 4, TPHCM",
+    "seeYouAtWedding": "Hi vọng bạn có thể tham dự",
+    "seeYouAtWeddingSubTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nisi earum\n                                nihil\n                                perspiciatis\n                                magnam facilis, error explicabo obcaecati maiores sunt exercitationem doloribus tempora, sit voluptate autem quibusdam velit alias. Reprehenderit.",
+    "registry": "Registry",
+    "registrySubTitle": "We’re lucky enough to have nearly everything we need for our home already. And since neither of us has ever been outside of North America, we want our honeymoon to be extra special! If you want to help make it unforgettable, you can contribute using the link to the right. If you would like to give us something to update our home, we’ve compiled a short registry as well.",
+    "theDayGotEngaged": "Hình ảnh",
+    "theDayGotEngagedSubTitle": "Andy and Jeska met in university in the Graphic Design program. They both remember each other from orientation, but it wasn’t love at first sight, that’s for sure. Andy remembers Jeska as a ‘snooty art bitch (having been in the visual arts program at the time), and she remembers Andy being an ‘arrogant computer nerd’, boasting his knowledge of Macs over the other students."
   }
 }

@@ -11,8 +11,11 @@ import {EMPTY_IMAGE_HOLDER, ImageMapper, ShowCaseGallery} from "@/types/gallery/
 import RSVP from "@/app/components/RSVP";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Link from "next/link";
+import {useTranslations} from "next-intl";
 
 export default function LandingPage({ locale }: { locale: string }) {
+    const t = useTranslations('Home');
+    
     const { images } = useGetImages();
     
     const recaptchaKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '';
@@ -68,14 +71,14 @@ export default function LandingPage({ locale }: { locale: string }) {
                                 <div className="gla_logo_txt">
                                     <a href="/" className="gla_logo">Luan & Quynh</a>
                         
-                                    <div className="gla_logo_und">March 31st, 2024</div>
+                                    <div className="gla_logo_und">{t('weddingDate')}</div>
                                 </div>
                             </div>
                 
                             <div className="gla_main_menu gla_main_menu_mobile">
                                 <div className="gla_main_menu_icon">
                                     <b>Menu</b>
-                                    <b className="gla_main_menu_icon_b">Back</b>
+                                    <b className="gla_main_menu_icon_b">{t('backButton')}</b>
                                 </div>
                             </div>
                             
@@ -86,9 +89,9 @@ export default function LandingPage({ locale }: { locale: string }) {
                             <div className="gla_main_menu_content_menu gla_wht_txt text-right">
                                 <div className="container">
                                     <ul>
-                                        <li className="gla_parent"><a href="#" onClick={() => onMobileMenuClick("#rsvp_section")}>Invitation</a></li>
-                                        <li className="gla_parent"><a href="#" onClick={() => onMobileMenuClick("#rsvp_section")}>Send wishes</a></li>
-                                        <li className="gla_parent"><Link href='/#rsvp_section'>About us</Link></li>
+                                        <li className="gla_parent"><a href="#" onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.invitation')}</a></li>
+                                        <li className="gla_parent"><a href="#" onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.sendWishes')}</a></li>
+                                        <li className="gla_parent"><a href="#" onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.aboutUs')}</a></li>
                                     </ul>
                                     <div className="gla_main_menu_content_menu_copy">
                                         <br />
@@ -108,9 +111,9 @@ export default function LandingPage({ locale }: { locale: string }) {
                 
                             <div className="gla_default_menu">
                                 <ul>
-                                    <li className="gla_parent"><a href="#rsvp_section">Invitation</a></li>
-                                    <li className="gla_parent"><a href="#rsvp_section">Send wishes</a></li>
-                                    <li className="gla_parent"><a href="#rsvp_section">About us</a></li>
+                                    <li className="gla_parent"><a href="#rsvp_section">{t('menu.invitation')}</a></li>
+                                    <li className="gla_parent"><a href="#rsvp_section">{t('menu.sendWishes')}</a></li>
+                                    <li className="gla_parent"><a href="#rsvp_section">{t('menu.aboutUs')}</a></li>
                                 </ul>
                             </div>
                         
@@ -184,15 +187,9 @@ export default function LandingPage({ locale }: { locale: string }) {
                                     data-bottom-top="@src:/images/animations/ourwedding_wh.gif" height="150"
                                     alt=""/></p>
                             
-                            <h2>We’re Getting Married!</h2>
+                            <h2>{t('gettingMarried')}</h2>
                             
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nisi earum
-                                nihil
-                                perspiciatis
-                                magnam facilis, error explicabo obcaecati maiores sunt exercitationem doloribus
-                                tempora, sit
-                                voluptate
-                                autem quibusdam velit alias. Reprehenderit.</p>
+                            <p>{t('gettingMarriedSubTitle')}</p>
                         
                         
                         </div>
@@ -208,9 +205,9 @@ export default function LandingPage({ locale }: { locale: string }) {
                             <p><img src="/images/animations/savethedate_wh.gif"
                                     data-bottom-top="@src:/images/animations/savethedate_wh.gif"
                                     height="150" alt=""/></p>
-                            <h2>March 31st, 2024</h2>
+                            <h2>{t('weddingDate')}</h2>
                             {/* eslint-disable-next-line react/no-unescaped-entities */}
-                            <h3 className="gla_subtitle">St. Thomas's Church,<br/>Bristol, U.K.</h3>
+                            <h3 className="gla_subtitle">{t('address')}<br/>{t('city')}</h3>
                             <div className="gla_countdown" data-year="2024" data-month="03" data-day="31"></div>
                         
                         </div>
@@ -232,16 +229,12 @@ export default function LandingPage({ locale }: { locale: string }) {
                         
                         
                         <div className="container text-center">
-                            <p><img src="/images/animations/just_st.gif"
-                                    data-bottom-top="@src:resources/images/animations/just_st.gif"
+                            <p><img src="/images/animations/flowers3.gif"
+                                    data-bottom-top="@src:images/animations/flowers3.gif"
                                     height="150"
                                     alt=""/></p>
-                            <div className="gla_slide_midtitle">See you at the wedding!</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum pariatur vel rerum qui
-                                nesciunt eaque,
-                                suscipit delectus sunt, dolore facilis! Dignissimos fugit facere veniam ad nisi, eveniet
-                                pariatur
-                                maiores laborum!</p>
+                            <h2>{t('seeYouAtWedding')}</h2>
+                            <p>{t('seeYouAtWeddingSubTitle')}</p>
                             <p><a href="#rsvp_section" className="btn">RSVP</a></p>
                         
                         
@@ -251,7 +244,7 @@ export default function LandingPage({ locale }: { locale: string }) {
                     
                     <section className="gla_section" id='rsvp_section'>
                         <div className="container text-center">
-                            <p><img src="/images/animations/rsvp_st.gif" data-bottom-top="@src:images/animations/rsvp.gif"
+                            <p><img src="/images/animations/rsvp_gold_wh.gif" data-bottom-top="@src:images/animations/rsvp_gold_wh.gif"
                                     height="180" alt=""/></p>
                             
                             <div className="row">
@@ -272,17 +265,8 @@ export default function LandingPage({ locale }: { locale: string }) {
                         <div className="container text-center">
                             
                             
-                            <h2>Registry</h2>
-                            <p>We’re lucky enough to have nearly everything we need for our home already. And since
-                                neither
-                                of us has
-                                ever been outside of North America, we want our honeymoon to be extra special! If you
-                                want
-                                to help make
-                                it unforgettable, you can contribute using the link to the right. If you would like to
-                                give
-                                us something
-                                to update our home, we’ve compiled a short registry as well.</p>
+                            <h2>{t('registry')}</h2>
+                            <p>{t('registrySubTitle')}</p>
                         </div>
                     
                     </section>
@@ -292,24 +276,9 @@ export default function LandingPage({ locale }: { locale: string }) {
                         
                         
                         <div className="container text-center">
-                            <h2>The Day They Got Engaged</h2>
-                            <p>Andy and Jeska met in university in the Graphic Design program. They both remember each
-                                other
-                                from
-                                orientation, but it wasn’t love at first sight, that’s for sure. Andy remembers Jeska as
-                                a
-                                ‘snooty art
-                                bitch (having been in the visual arts program at the time), and she remembers Andy being
-                                an
-                                ‘arrogant
-                                computer nerd’, boasting his knowledge of Macs over the other students.</p>
-                            
-                            <div className="button-group filter-button-group">
-                                <a data-filter="*">Show All</a>
-                                <a data-filter=".engagement">Engagement</a>
-                                <a data-filter=".ceremony">Ceremony</a>
-                            </div>
-                            
+                            <h2>{t('theDayGotEngaged')}</h2>
+                            <p>{t('theDayGotEngagedSubTitle')}</p>
+                         
                             <div className="gla_portfolio_no_padding grid">
                                 {ShowCaseGallery.map((label, idx) => {
                                     const url = getImageUrlFromLabel(label);

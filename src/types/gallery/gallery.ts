@@ -12,23 +12,18 @@ export const ImageMapper = {
 }
 
 export const ShowCaseGallery = [
-    'resize/DSC05305.jpeg',
-    'resize/DSC05529.jpeg',
-    'resize/DSC04508.jpeg',
-    'resize/DSC04588.jpeg',
+    
     'resize/DSC04610.jpeg',
     'resize/DSC04625.jpeg',
+    'resize/DSC04588.jpeg',
+    'resize/DSC05529.jpeg',
+    'resize/DSC05305.jpeg',
     'resize/DSC04700.jpeg',
     'resize/DSC04720.jpeg',
-    'resize/DSC04729.jpeg',
-    'resize/DSC04760.jpeg',
-    'resize/DSC04807.jpeg',
-    'resize/DSC04959.jpeg',
     'resize/DSC04988.jpeg',
-    'resize/DSC05134.jpeg',
-    'resize/DSC05392.jpeg',
-    'resize/DSC05480.jpeg',
+    'resize/DSC04760.jpeg',
     'resize/DSC05495.jpeg',
+    'resize/DSC04959.jpeg',
     'resize/DSC05506.jpeg',
 ];
 
