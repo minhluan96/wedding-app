@@ -5,14 +5,17 @@ const LandingPage = dynamic(() => import('@/app/components/LandingPage').then(mo
     ssr: false
 });
 
-export default function Home() {
+// @ts-ignore
+export default function Home(props): JSX.Element {
+    const { locale } = props;
+
     return (
         <Suspense
             fallback={
                 <p style={{ textAlign: "center" }}>Loading</p>
             }
         >
-            <LandingPage />
+            <LandingPage locale={locale} />
         </Suspense>
     )
 }
