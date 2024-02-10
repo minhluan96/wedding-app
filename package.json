@@ -47,6 +47,7 @@
     "prisma": "^5.9.1",
     "ts-node": "^10.9.2"
   },
+  "proxy": "http://localhost:3000",
   "prisma": {
     "seed": "ts-node --transpile-only ./prisma/seed.ts"
   }

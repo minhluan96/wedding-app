@@ -6,7 +6,7 @@ export async function getUser({ queryKey }: any): Promise<UserResponse> {
 
     if (!id) return null;
 
-    return (await fetch(`${API_ENDPOINT}/api/user/${id}`).then(async (resp) => {
+    return (await fetch(`/api/user/${id}`).then(async (resp) => {
         const response = await resp.json();
         return response?.data as UserResponse;
     }));
