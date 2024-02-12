@@ -51,7 +51,7 @@ export default class S3Service {
             Key: objectName
         });
         
-        return await getSignedUrl(this._client, cmd, { expiresIn: 3600 });
+        return await getSignedUrl(this._client, cmd, { expiresIn: 3600000 });
     }
     
     public async listAllObjects(): Promise<ListObjectsV2CommandOutput> {
