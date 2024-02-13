@@ -48,7 +48,7 @@ export default function LandingPage({ locale }: { locale: string }) {
     
     useEffect(() => {
         setDataBackground();
-    }, [imageUrlMapper]);
+    }, [images, setDataBackground]);
     
     const onMobileMenuClick = useCallback((section: string) => {
         window.location.reload();

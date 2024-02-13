@@ -12,7 +12,6 @@ export const ImageMapper = {
 }
 
 export const ShowCaseGallery = [
-    
     'resize/DSC04610.jpeg',
     'resize/DSC04625.jpeg',
     'resize/DSC04588.jpeg',
