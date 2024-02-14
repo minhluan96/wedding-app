@@ -207,11 +207,11 @@ export default function LandingPage({ locale }: { locale: string }) {
                         
                         
                         <div className="container text-center">
-                            <p><img src="/images/animations/flowers3.gif"
+                            <p style={{ maxWidth: "700px" }}><img src="/images/animations/flowers3.gif"
                                     data-bottom-top="@src:images/animations/flowers3.gif"
                                     height="150"
                                     alt=""/></p>
-                            <h2>{t('seeYouAtWedding')}</h2>
+                            <h2 style={{ maxWidth: "700px" }}>{t('seeYouAtWedding')}</h2>
                             <p>{t('seeYouAtWeddingSubTitle')}</p>
                             <p><a href="#rsvp_section" className="btn">RSVP</a></p>
                         

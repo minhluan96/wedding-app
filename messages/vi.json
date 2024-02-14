@@ -2,8 +2,8 @@
   "RSVP": {
     "delightedMessage": "Hi vọng bạn có thể tham dự buổi tiệc này với vợ chồng mình!",
     "acceptBy": "Để thuận tiện cho việc sắp xếp chỗ ngồi, vui lòng phản hồi giúp vợ chồng mình nhé!",
-    "acceptButton": "Yeah, sẵn sàng!",
-    "cancelButton": "Oh, rất tiếc",
+    "acceptButton": "Sẵn sàng!",
+    "cancelButton": "Rất tiếc",
     "sendFeedback": "Gửi phản hồi ",
     "donationMessage": "Gửi lời chúc đến đôi uyên ương thông qua",
     "namePlaceholder": "Tên của bạn",
@@ -18,14 +18,14 @@
       "aboutUs": "Thông tin"
     },
     "gettingMarried": "Chúng mình chính thức về một nhà",
-    "gettingMarriedSubTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nisi earum\n                                nihil\n                                perspiciatis\n                                magnam facilis, error explicabo obcaecati maiores sunt exercitationem doloribus tempora, sit voluptate autem quibusdam velit alias. Reprehenderit.",
+    "gettingMarriedSubTitle": "Sau nhiều năm tìm hiểu và xây dựng những kỷ niệm cùng nhau, hôm nay đánh dấu sự khởi đầu đẹp đẽ của hành trình mới của chúng mình dưới một mái nhà chung. Một chương mới đã được mở ra, một chương mới chúng mình sẽ viết những câu chuyện cùng nhau.",
     "address": "Riverside Palace",
     "city": "Quận 4, TPHCM",
     "seeYouAtWedding": "Hi vọng bạn có thể tham dự",
-    "seeYouAtWeddingSubTitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nisi earum\n                                nihil\n                                perspiciatis\n                                magnam facilis, error explicabo obcaecati maiores sunt exercitationem doloribus tempora, sit voluptate autem quibusdam velit alias. Reprehenderit.",
-    "registry": "Registry",
-    "registrySubTitle": "We’re lucky enough to have nearly everything we need for our home already. And since neither of us has ever been outside of North America, we want our honeymoon to be extra special! If you want to help make it unforgettable, you can contribute using the link to the right. If you would like to give us something to update our home, we’ve compiled a short registry as well.",
+    "seeYouAtWeddingSubTitle": "Lễ Đính Hôn tụi mình xin phép được tổ chức nho nhỏ, hi vọng bạn có thể tham dự với vợ chồng mình vào ngày 31 tháng 3 sắp tới. Chúng mình rất mong có thể gặp lại bạn ở buổi tiệc!",
+    "registry": "Về chúng mình",
+    "registrySubTitle": "Luân và Quỳnh, hai con người đã gặp nhau từ thời trung học, giờ đây đã cùng chung sống dưới mái nhà hạnh phúc. Tình yêu của họ như một bản tình ca êm đềm, khởi nguồn từ những ngày tháng học trò ngây thơ. Giờ đây, họ đã cùng nhau xây dựng một gia đình, mỗi ngày trôi qua đều chứng kiến tình yêu của họ ngày càng mạnh mẽ và sâu đậm. Mỗi ánh mắt trao nhau, mỗi nụ cười chia sẻ, mỗi lời yêu thương đều khắc sâu vào trái tim họ, tạo nên một câu chuyện tình yêu đẹp đẽ và lãng mạn.",
     "theDayGotEngaged": "Hình ảnh",
-    "theDayGotEngagedSubTitle": "Andy and Jeska met in university in the Graphic Design program. They both remember each other from orientation, but it wasn’t love at first sight, that’s for sure. Andy remembers Jeska as a ‘snooty art bitch (having been in the visual arts program at the time), and she remembers Andy being an ‘arrogant computer nerd’, boasting his knowledge of Macs over the other students."
+    "theDayGotEngagedSubTitle": "Ngày chúng mình đính hôn là một ngày tràn đầy niềm vui và sự mong đợi. Khi Luân quỳ xuống một chân, trao chiếc nhẫn cho Quỳnh, trái tim họ như đập rộn ràng trong hạnh phúc. Khoảnh khắc ấy thật phép màu, khởi đầu cho một chương mới trong cuộc đời họ. Đó là một ngày họ sẽ mãi ghi nhớ, một ngày tình yêu của họ được đắm đuối trong lời hứa về một tương lai mãi mãi."
   }
 }
