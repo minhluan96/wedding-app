@@ -7,7 +7,7 @@ import 'public/css/glanz_style.css';
 import 'public/fonts/marsha/stylesheet.css';
 import {MainMenuContent} from "@/app/components/styles";
 import {useGetImages} from "@/app/hooks/useGetImages/useGetImages";
-import {EMPTY_IMAGE_HOLDER, ImageMapper, ShowCaseGallery} from "@/types/gallery/gallery";
+import {EMPTY_DOMAIN, EMPTY_IMAGE_HOLDER, ImageMapper, ShowCaseGallery} from "@/types/gallery/gallery";
 import RSVP from "@/app/components/RSVP";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Link from "next/link";
@@ -41,8 +41,13 @@ export default function LandingPage({ locale }: { locale: string }) {
             // @ts-ignore
             const url = imageUrlMapper?.[id];
             if (!section || !url) return;
-
-            section.setAttribute('style', `background-image: url(${url}); background-attachment: fixed; background-position: 50% 60%;`)
+            
+            const currentStyles = section.getAttribute('style') ?? '';
+            const hasNotSetBackground = currentStyles.includes(EMPTY_DOMAIN);
+            
+            if (hasNotSetBackground || !currentStyles) {
+                section.setAttribute('style', `background-image: url(${url}); background-attachment: fixed; background-position: 50% 60%;`)
+            }
         })
     }, [imageUrlMapper]);
     

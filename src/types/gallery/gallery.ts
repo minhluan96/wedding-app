@@ -27,3 +27,4 @@ export const ShowCaseGallery = [
 ];
 
 export const EMPTY_IMAGE_HOLDER = 'http://placehold.it/600x600';
+export const EMPTY_DOMAIN = 'placehold.it';

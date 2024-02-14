@@ -290,7 +290,9 @@
 							var opacity = $(this).attr('data-opacity');
 							var position = $(this).attr('data-position');
 							var height = $(this).attr('data-height');
-
+							if (image){
+								$(this).css('background-image', 'url('+image+')');
+							}
 							if (gradient){
 								$(this).css('background-image', gradient);	
 							}
