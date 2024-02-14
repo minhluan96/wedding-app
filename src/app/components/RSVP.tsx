@@ -148,10 +148,10 @@ export default function RSVP(): JSX.Element {
                     <h4>{t('donationMessage')}</h4>
                 </Grid>
                 <Grid xs={6}>
-                    <p onClick={() => onLinkClick(PAYMENT_URL.MOMO)}><StyledImg $size={250} src="/images/QR_payment.jpeg" alt="" /></p>
+                    <span onClick={() => onLinkClick(PAYMENT_URL.MOMO)}><StyledImg $size={250} src="/images/QR_payment.jpeg" alt="" /></span>
                 </Grid>
                 <Grid xs={6}>
-                    <p onClick={() => onLinkClick(PAYMENT_URL.BINANCE)}><StyledImg $size={260} src="/images/binance_QR.jpeg" alt=""/></p>
+                    <span onClick={() => onLinkClick(PAYMENT_URL.BINANCE)}><StyledImg $size={250} src="/images/img.png" alt=""/></span>
                 </Grid>
             </Grid>
         </form>
@@ -182,7 +182,7 @@ export const Text = styled.span`
 export const StyledImg = styled.img<{ $size?: number }>`
     width:  ${({ $size }) => $size ?? 120}px;
     height: ${({ $size }) => $size ?? 120}px !important;
-    object-fit: fill;
+    object-fit: contain !important;
     cursor: pointer;
 `;
 

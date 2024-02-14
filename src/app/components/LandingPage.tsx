@@ -1,18 +1,17 @@
 'use client'
 
-import React, {useCallback, useEffect, useMemo} from "react";
+import React, {useCallback, useMemo} from "react";
 import 'public/css/glanz_library.css';
 import 'public/fonts/themify-icons.css';
 import 'public/css/glanz_style.css';
 import 'public/fonts/marsha/stylesheet.css';
-import {MainMenuContent} from "@/app/components/styles";
+import {MainMenuContent, SectionBg} from "@/app/components/styles";
 import {useGetImages} from "@/app/hooks/useGetImages/useGetImages";
-import {EMPTY_DOMAIN, EMPTY_IMAGE_HOLDER, ImageMapper, ShowCaseGallery} from "@/types/gallery/gallery";
+import {EMPTY_IMAGE_HOLDER, ImageMapper, ShowCaseGallery} from "@/types/gallery/gallery";
 import RSVP from "@/app/components/RSVP";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Link from "next/link";
 import {useTranslations} from "next-intl";
-import styled from "styled-components";
 
 export default function LandingPage({ locale }: { locale: string }) {
     const t = useTranslations('Home');
@@ -35,9 +34,15 @@ export default function LandingPage({ locale }: { locale: string }) {
         }, {})
     }, [images]);
     
-    const onMobileMenuClick = useCallback((section: string) => {
+    const onMobileMenuClick = useCallback((_: string) => {
         window.location.reload();
-    }, [locale])
+    }, []);
+    
+    const onChangeLanguage = useCallback(() => {
+        const preferLocale = window.location.pathname === '/en' ? 'vi' : 'en';
+        
+        window.location.href = `${window.location.origin}/${preferLocale}`;
+    }, []);
     
     return imageUrlMapper && (
         <GoogleReCaptchaProvider reCaptchaKey={recaptchaKey}>
@@ -67,28 +72,35 @@ export default function LandingPage({ locale }: { locale: string }) {
                                 </div>
                             </div>
                             
-                            <MainMenuContent id='mobile_cover_section' className="gla_main_menu_content gla_image_bck">
+                            <MainMenuContent $url={imageUrlMapper?.["mobile_cover_section"]} id='mobile_cover_section' className="gla_main_menu_content gla_image_bck">
                                 <div className="gla_over" data-color="#000" data-opacity="0.7" />
                             </MainMenuContent>
                 
                             <div className="gla_main_menu_content_menu gla_wht_txt text-right">
                                 <div className="container">
                                     <ul>
-                                        <li className="gla_parent"><a href="#" onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.invitation')}</a></li>
-                                        <li className="gla_parent"><a href="#" onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.sendWishes')}</a></li>
-                                        <li className="gla_parent"><a href="#" onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.aboutUs')}</a></li>
+                                        <li className="gla_parent"><a href="#"
+                                                                      onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.invitation')}</a>
+                                        </li>
+                                        <li className="gla_parent"><a href="#"
+                                                                      onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.sendWishes')}</a>
+                                        </li>
+                                        <li className="gla_parent"><a href="#"
+                                                                      onClick={() => onMobileMenuClick("#rsvp_section")}>{t('menu.aboutUs')}</a>
+                                        </li>
+                                        <li className="gla_parent">
+                                            <Link href='#' onClick={onChangeLanguage}>
+                                                {t('menu.language')}
+                                            </Link>
+                                        </li>
                                     </ul>
                                     <div className="gla_main_menu_content_menu_copy">
-                                        <br />
+                                        <br/>
                                         <p>Luan & Quynh 2024</p>
-                                            <div className="gla_footer_social">
+                                        <div className="gla_footer_social">
                                                 <a href="#"><i className="ti ti-facebook gla_icon_box"></i></a>
                                                 <a href="#"><i className="ti ti-instagram gla_icon_box"></i></a>
-                                                <a href="#"><i className="ti ti-google gla_icon_box"></i></a>
-                                                <a href="#"><i className="ti ti-youtube gla_icon_box"></i></a>
-                                                <a href="#"><i className="ti ti-twitter gla_icon_box"></i></a>
-                                                <a href="#"><i className="ti ti-pinterest gla_icon_box"></i></a>
-                                            </div>
+                                        </div>
                         
                                     </div>
                                 </div>
@@ -98,7 +110,12 @@ export default function LandingPage({ locale }: { locale: string }) {
                                 <ul>
                                     <li className="gla_parent"><a href="#rsvp_section">{t('menu.invitation')}</a></li>
                                     <li className="gla_parent"><a href="#rsvp_section">{t('menu.sendWishes')}</a></li>
-                                    <li className="gla_parent"><a href="#rsvp_section">{t('menu.aboutUs')}</a></li>
+                                    <li className="gla_parent"><a href="#registry">{t('menu.aboutUs')}</a></li>
+                                    <li className="gla_parent">
+                                        <Link href='#' onClick={onChangeLanguage}>
+                                            {t('menu.language')}
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         
@@ -290,20 +307,3 @@ export default function LandingPage({ locale }: { locale: string }) {
     )
 }
 
-type SectionProps = {
-    $url?: any;
-}
-
-export const SectionBg = styled.section<SectionProps>`
-    background-attachment: fixed;
-    background-position: center;
-    overflow: hidden;
-    position: relative;
-    background-size: cover;
-
-    ${({ $url }) => $url && `
-        background-image: url(${$url})
-    `}
-
-    
-`;

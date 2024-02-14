@@ -11,11 +11,12 @@
   },
   "Home": {
     "weddingDate": "31 Tháng 3, 2024",
-    "backButton": "Quay lại",
+    "backButton": "Back",
     "menu": {
       "invitation": "Thiệp mời",
       "sendWishes": "Gửi lời chúc",
-      "aboutUs": "Thông tin"
+      "aboutUs": "Thông tin",
+      "language": "Tiếng Anh"
     },
     "gettingMarried": "Chúng mình chính thức về một nhà",
     "gettingMarriedSubTitle": "Sau nhiều năm tìm hiểu và xây dựng những kỷ niệm cùng nhau, hôm nay đánh dấu sự khởi đầu đẹp đẽ của hành trình mới của chúng mình dưới một mái nhà chung. Một chương mới đã được mở ra, một chương mới chúng mình sẽ viết những câu chuyện cùng nhau.",
