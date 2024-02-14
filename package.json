@@ -25,6 +25,7 @@
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "@vercel/speed-insights": "^1.0.9",
     "add": "^2.0.6",
     "aws-sdk": "^2.1524.0",
     "axios": "^1.6.7",

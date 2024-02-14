@@ -5,7 +5,8 @@ import Provider from "@/app/utils/Provider";
 import {locales} from "@/config";
 import {unstable_setRequestLocale} from "next-intl/server";
 import {NextIntlClientProvider, useMessages} from 'next-intl';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 type Props = {
     children: ReactNode;
@@ -48,6 +49,7 @@ export default function RootLayout({
                     {children}
                 </Provider>
             </NextIntlClientProvider>
+            <SpeedInsights />
         </body>
         </html>
     )
