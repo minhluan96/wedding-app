@@ -39,9 +39,11 @@ export default function LandingPage({ locale }: { locale: string }) {
     }, []);
     
     const onChangeLanguage = useCallback(() => {
-        const preferLocale = window.location.pathname === '/en' ? 'vi' : 'en';
+        const currentLocale = window.location.pathname;
+        const preferLocale = currentLocale === '/en' ? 'vi' : 'en';
+        const newURL = window.location.href.replace(currentLocale, `/${preferLocale}`);
         
-        window.location.href = `${window.location.origin}/${preferLocale}`;
+        window.location.href = newURL;
     }, []);
     
     return imageUrlMapper && (
