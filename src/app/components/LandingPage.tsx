@@ -12,6 +12,7 @@ import RSVP from "@/app/components/RSVP";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Link from "next/link";
 import {useTranslations} from "next-intl";
+import styled from "styled-components";
 
 export default function LandingPage({ locale }: { locale: string }) {
     const t = useTranslations('Home');
@@ -26,7 +27,7 @@ export default function LandingPage({ locale }: { locale: string }) {
         return images.find((image) => image.label.includes(label))?.url;
     }, [images]);
 
-    const imageUrlMapper = useMemo(() => {
+    const imageUrlMapper: any = useMemo(() => {
         return Object.entries(ImageMapper).reduce((acc, [key, val]) => {
             // @ts-ignore
             acc[key] = getImageUrlFromLabel(val);
@@ -34,32 +35,11 @@ export default function LandingPage({ locale }: { locale: string }) {
         }, {})
     }, [images]);
     
-    const setDataBackground = useCallback(() => {
-        Object.keys(ImageMapper).forEach((id) => {
-            
-            const section = document.body.querySelector(`#${id}`);
-            // @ts-ignore
-            const url = imageUrlMapper?.[id];
-            if (!section || !url) return;
-            
-            const currentStyles = section.getAttribute('style') ?? '';
-            const hasNotSetBackground = currentStyles.includes(EMPTY_DOMAIN);
-            
-            if (hasNotSetBackground || !currentStyles) {
-                section.setAttribute('style', `background-image: url(${url}); background-attachment: fixed; background-position: 50% 60%;`)
-            }
-        })
-    }, [imageUrlMapper]);
-    
-    useEffect(() => {
-        setDataBackground();
-    }, [images, setDataBackground]);
-    
     const onMobileMenuClick = useCallback((section: string) => {
         window.location.reload();
     }, [locale])
     
-    return (
+    return imageUrlMapper && (
         <GoogleReCaptchaProvider reCaptchaKey={recaptchaKey}>
             <div className="gla_page" id="gla_page">
                 <a href="#gla_page" className="gla_top ti ti-angle-up gla_go"/>
@@ -170,11 +150,10 @@ export default function LandingPage({ locale }: { locale: string }) {
                 
                 <section id="gla_content" className="gla_content">
                     
-                    
-                    <section id='getting_marry_section'
-                             className="gla_section gla_lg_padding gla_image_bck gla_fixed gla_wht_txt"
-                             data-stellar-background-ratio="0.2">
-                        
+                    <SectionBg $url={imageUrlMapper?.["getting_marry_section"]}
+                               className="gla_section gla_fixed gla_lg_padding gla_wht_txt"
+                               data-stellar-background-ratio="0.2"
+                    >
                         <div className="gla_slider_flower" data-bottom-top="@class:active"
                              data--200-bottom="@class:no_active">
                             <div className="gla_slider_flower_c1 gla_slider_flower_item"></div>
@@ -198,27 +177,21 @@ export default function LandingPage({ locale }: { locale: string }) {
                         
                         
                         </div>
-                    </section>
+                    </SectionBg>
                     
-                    
-                    <section id='count_down_section' className="gla_section gla_image_bck gla_fixed gla_wht_txt"
-                             data-stellar-background-ratio="0.2"
-                             data-color="#fff" data-opacity="0.7">
-                        
-                        
+                    <SectionBg $url={imageUrlMapper?.["count_down_section"]}
+                               className="gla_section gla_fixed gla_wht_txt" data-stellar-background-ratio="0.2"
+                               data-color="#fff" data-opacity="0.7">
                         <div className="container text-center">
                             <p><img src="/images/animations/savethedate_wh.gif"
                                     data-bottom-top="@src:/images/animations/savethedate_wh.gif"
                                     height="150" alt=""/></p>
                             <h2>{t('weddingDate')}</h2>
-                            {/* eslint-disable-next-line react/no-unescaped-entities */}
                             <h3 className="gla_subtitle">{t('address')}<br/>{t('city')}</h3>
                             <div className="gla_countdown" data-year="2024" data-month="03" data-day="31"></div>
                         
                         </div>
-                    
-                    </section>
-                    
+                    </SectionBg>
                     
                     <section className="gla_section gla_lg_padding gla_image_bck" data-color="#efe5dd">
                         
@@ -260,21 +233,15 @@ export default function LandingPage({ locale }: { locale: string }) {
                         </div>
                     </section>
                     
-                    
-                    <section id='registry_section' className="gla_section gla_image_bck gla_wht_txt gla_fixed"
-                             data-stellar-background-ratio="0.8"
-                             data-image="http://placehold.it/1400x800">
-                        
+                    <SectionBg $url={imageUrlMapper?.["registry_section"]} className="gla_section gla_fixed gla_wht_txt"
+                               data-stellar-background-ratio="0.2">
                         <div className="gla_over" data-color="#1e1d2d" data-opacity="0.4"></div>
                         
                         <div className="container text-center">
-                            
-                            
                             <h2>{t('registry')}</h2>
                             <p>{t('registrySubTitle')}</p>
                         </div>
-                    
-                    </section>
+                    </SectionBg>
                     
                     
                     <section className="gla_section gla_image_bck">
@@ -283,7 +250,7 @@ export default function LandingPage({ locale }: { locale: string }) {
                         <div className="container text-center">
                             <h2>{t('theDayGotEngaged')}</h2>
                             <p>{t('theDayGotEngagedSubTitle')}</p>
-                         
+                            
                             <div className="gla_portfolio_no_padding grid">
                                 {ShowCaseGallery.map((label, idx) => {
                                     const url = getImageUrlFromLabel(label);
@@ -306,11 +273,7 @@ export default function LandingPage({ locale }: { locale: string }) {
                     
                     </section>
                     
-                    
-                    <section id='thank_you_section' className="gla_section gla_image_bck gla_fixed gla_wht_txt"
-                             data-stellar-background-ratio="0.2"
-                             data-image="http://placehold.it/1400x800">
-                        
+                    <SectionBg $url={imageUrlMapper?.["thank_you_section"]} className="gla_section gla_fixed gla_wht_txt" data-stellar-background-ratio="0.2">
                         <div className="gla_over" data-color="#000" data-opacity="0.4"></div>
                         
                         <div className="container text-center">
@@ -319,11 +282,28 @@ export default function LandingPage({ locale }: { locale: string }) {
                         
                         
                         </div>
-                    
-                    </section>
+                    </SectionBg>
                 
                 </section>
             </div>
         </GoogleReCaptchaProvider>
     )
 }
+
+type SectionProps = {
+    $url?: any;
+}
+
+export const SectionBg = styled.section<SectionProps>`
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+
+    ${({ $url }) => $url && `
+        background-image: url(${$url})
+    `}
+
+    
+`;
