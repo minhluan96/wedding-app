@@ -28,5 +28,11 @@
     "registrySubTitle": "Luân và Quỳnh, hai con người đã gặp nhau từ thời trung học, giờ đây đã cùng chung sống dưới mái nhà hạnh phúc. Tình yêu của họ như một bản tình ca êm đềm, khởi nguồn từ những ngày tháng học trò ngây thơ. Giờ đây, họ đã cùng nhau xây dựng một gia đình, mỗi ngày trôi qua đều chứng kiến tình yêu của họ ngày càng mạnh mẽ và sâu đậm. Mỗi ánh mắt trao nhau, mỗi nụ cười chia sẻ, mỗi lời yêu thương đều khắc sâu vào trái tim họ, tạo nên một câu chuyện tình yêu đẹp đẽ và lãng mạn.",
     "theDayGotEngaged": "Hình ảnh",
     "theDayGotEngagedSubTitle": "Ngày chúng mình đính hôn là một ngày tràn đầy niềm vui và sự mong đợi. Khi Luân quỳ xuống một chân, trao chiếc nhẫn cho Quỳnh, trái tim họ như đập rộn ràng trong hạnh phúc. Khoảnh khắc ấy thật phép màu, khởi đầu cho một chương mới trong cuộc đời họ. Đó là một ngày họ sẽ mãi ghi nhớ, một ngày tình yêu của họ được đắm đuối trong lời hứa về một tương lai mãi mãi."
+  },
+  "RejectModal": {
+    "title": "Gửi lời chúc",
+    "subTitle": "Chúng mình chân thành lấy làm tiếc khi bạn không thể tham dự ngày đặc biệt của chúng mình. Chúng mình trân trọng những lời chúc ấm áp và sự ủng hộ của bạn. Nếu bạn muốn để lại một tin nhắn hoặc chia sẻ những lời chúc, xin hãy để lại bên dưới. Những lời tốt lành của bạn có ý nghĩa vô cùng đối với chúng mình",
+    "placeholder": "Gửi lời chúc của bạn ở đây",
+    "send": "Gửi"
   }
 }

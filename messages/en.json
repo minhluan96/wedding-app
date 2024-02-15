@@ -28,5 +28,11 @@
     "registrySubTitle": "Luan and Quynh, once high school friends, are now a happily married couple. Our bond, which began as a youthful friendship, blossomed into enduring love. we navigated life's journey together, our relationship maturing over time. Today, we cherish their love that grows stronger with each passing day.",
     "theDayGotEngaged": "The Day They Got Engaged",
     "theDayGotEngagedSubTitle": "The day we got engaged was filled with joy and anticipation. As Luan went down on one knee, presenting the ring to Quynh, their hearts fluttered with excitement. The moment was magical, marking the beginning of a new chapter in their lives. It was a day they would always remember, a day their love was sealed with a promise of forever."
+  },
+  "RejectModal": {
+    "title": "Send wishes",
+    "subTitle": "While we deeply regret that some of you won’t be able to join us on our special day, we appreciate your warm wishes and support. If you’d like to leave a message or share your blessings, please feel free to do so below. Your kind words mean the world to us",
+    "placeholder": "Share your blessings here",
+    "send": "Send"
   }
 }
